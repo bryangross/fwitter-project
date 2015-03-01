@@ -1,0 +1,25 @@
+<% if session[:user_id] %>
+    Welcome <%= @logged_in_user. username %>
+
+    <% end %>
+
+
+      <% @users.each do |user| %>
+        <h1> <%=user.username %> - <%=user.email %> - <%=user.profile_pic %> - <%=user.age %>  </h1>
+
+
+    <% end %>
+
+    <form action='/users' method="POST">
+    Username: <input class="form-control" type="text" name="username">
+    Email <input class="form-control" type="text" name="email">
+    Profile Pic <input class="form-control" type ="text" name="profile_pic">
+    Age <input class="form-control" type="text" name="profile_pic">
+    <input type="submit"> 
+    </form>
+
+      </div>
+
+
+  </body>
+</html>

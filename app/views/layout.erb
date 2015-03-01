@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Week 1 </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+
+</nav>
+
+  <body>
+
+
+  <div class="container">
+
+
+  <% if session[:user_id] != nil %>
+  <a href="/logout"> Logout </a>
+  <% end %>
+  <%= yield %>
+
+      </div>
+
+
+  </body>
+</html>

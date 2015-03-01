@@ -1,18 +1,20 @@
-class Tweet
-attr_accessor :user, :message
+ class Tweet < ActiveRecord::Base
 
-ALL_MESSAGES = []
+  belongs_to :user
+# attr_accessor :user, :message
 
-  def initialize(user, message)
-    @user = user
-    @message = message
-    ALL_MESSAGES << self
-  end
+# ALL_MESSAGES = []
 
-  def self.all_messages
-    ALL_MESSAGES
+#   def initialize(user, message)
+#     @user = user
+#     @message = message
+#     ALL_MESSAGES << self
+#   end
 
-  end
+#   def self.all_messages
+#     ALL_MESSAGES
 
-end
+#   end
+
+ end
 
